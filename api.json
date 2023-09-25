@@ -1,0 +1,61 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Sample Foo App",
+    "version": "1.0"
+  },
+  "paths": {
+    "/album": {
+      "get": {
+        "operationId": "Get Album Details",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "x-amf-mediaType": "application/json",
+            "schema": {
+              "$ref": "#/definitions/FooResponse"
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "Save Album",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "x-amf-mediaType": "application/json",
+            "schema": {
+              "$ref": "#/definitions/FooResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "FooResponse": {
+      "type": "object",
+      "required": [
+        "name",
+        "year"
+      ],
+      "properties": {
+        "name": {
+          "example": "Example",
+          "type": "string"
+        },
+        "year": {
+          "example": 1,
+          "type": "integer",
+          "format": "int"
+        }
+      }
+    }
+  }
+}
